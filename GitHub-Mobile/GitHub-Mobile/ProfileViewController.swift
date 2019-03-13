@@ -35,15 +35,6 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var profileCreateDateLabel: UILabel!
     
     var access_token = "0f61ac41c59e710e19166c66c06183c4b4daed51"
-    // bio, Email, website, profile_create_date
-    //var profileData = ["","","",""]
-//    @IBOutlet weak var avatarImage: UIImageView!
-//    @IBOutlet weak var name: UILabel!
-//    @IBOutlet weak var username: UILabel!
-//    @IBOutlet weak var ReposCount: UILabel!
-//    @IBOutlet weak var followersCount: UILabel!
-//    @IBOutlet weak var followingCount: UILabel!
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,13 +48,7 @@ class ProfileViewController: UIViewController {
         Alamofire.request("https://api.github.com/user?access_token=" + access_token).responseJSON { response in
             //print(response)
             if let dict = response.result.value as? [String: Any] {
-                print(dict)
-               //self.profileData[0] = dict["name"] as! String // name
-                //self.profileData[1] = dict["bio"] as! String  // bio
-                //self.dataDetail[1] = (dict["bio"] is NSNull || dict["bio"] == nil ? "" : dict["bio"]) as! String
-                //self.dataDetail[2] = (dict["email"] is NSNull || dict["email"] == nil ? "" : dict["email"]!) as! String
-               // self.dataDetail[3] = (dict["created_at"] is NSNull || dict["created_at"] == nil ? "" : String((dict["created_at"]! as! String).dropLast(10)))
-                
+                //print(dict)
                 
                 // name
                 self.nameLabel.text = ((dict["name"] == nil ? "" : dict["name"]!) as! String)

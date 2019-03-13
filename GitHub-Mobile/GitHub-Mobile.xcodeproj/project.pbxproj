@@ -3,13 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		94074DBE2236073A009086EE /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94074DBD2236073A009086EE /* RepositoriesViewController.swift */; };
 		94074DC022360848009086EE /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94074DBF22360848009086EE /* Repositories.swift */; };
-		94074DC2223613EB009086EE /* RepositoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94074DC1223613EB009086EE /* RepositoriesCell.swift */; };
+		941D3B65223812350026668E /* RepositoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941D3B64223812350026668E /* RepositoriesTableViewCell.swift */; };
 		946DB89F223317830069952D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946DB89E223317830069952D /* AppDelegate.swift */; };
 		946DB8A1223317830069952D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946DB8A0223317830069952D /* ProfileViewController.swift */; };
 		946DB8A6223317830069952D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 946DB8A4223317830069952D /* Main.storyboard */; };
@@ -36,7 +36,7 @@
 		5E96A159807AE3A3D1C585D2 /* Pods_GitHub_Mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHub_Mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94074DBD2236073A009086EE /* RepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; };
 		94074DBF22360848009086EE /* Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositories.swift; sourceTree = "<group>"; };
-		94074DC1223613EB009086EE /* RepositoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesCell.swift; sourceTree = "<group>"; };
+		941D3B64223812350026668E /* RepositoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesTableViewCell.swift; sourceTree = "<group>"; };
 		946DB89B223317830069952D /* GitHub-Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GitHub-Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		946DB89E223317830069952D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		946DB8A0223317830069952D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -85,7 +85,6 @@
 				3135BFB9F5A3655716A4C6C2 /* Pods-GitHub-Mobile.debug.xcconfig */,
 				A5A5D071FEBA91FEAF222472 /* Pods-GitHub-Mobile.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -116,7 +115,7 @@
 				946DB8A0223317830069952D /* ProfileViewController.swift */,
 				94074DBD2236073A009086EE /* RepositoriesViewController.swift */,
 				94074DBF22360848009086EE /* Repositories.swift */,
-				94074DC1223613EB009086EE /* RepositoriesCell.swift */,
+				941D3B64223812350026668E /* RepositoriesTableViewCell.swift */,
 				946DB8C022331BBB0069952D /* FollowingViewController.swift */,
 				946DB8C2223478E70069952D /* FollowerViewController.swift */,
 				946DB8A4223317830069952D /* Main.storyboard */,
@@ -285,7 +284,7 @@
 				94074DBE2236073A009086EE /* RepositoriesViewController.swift in Sources */,
 				946DB89F223317830069952D /* AppDelegate.swift in Sources */,
 				946DB8C3223478E70069952D /* FollowerViewController.swift in Sources */,
-				94074DC2223613EB009086EE /* RepositoriesCell.swift in Sources */,
+				941D3B65223812350026668E /* RepositoriesTableViewCell.swift in Sources */,
 				946DB8A1223317830069952D /* ProfileViewController.swift in Sources */,
 				94074DC022360848009086EE /* Repositories.swift in Sources */,
 			);

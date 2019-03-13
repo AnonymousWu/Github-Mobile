@@ -16,15 +16,13 @@ class Repositories{
     var url: String
     var summary: String
     var language: String
-    var icon: UIImage
     
-    init(repo_name: String, author: String, summary: String, language: String, icon: UIImage){
+    init(repo_name: String, author: String, url: String, summary: String, language: String){
         self.repo_name = repo_name
         self.author = author
-        self.url = ""
+        self.url = url
         self.summary = summary
         self.language = language
-        self.icon = icon
     }
 }
 

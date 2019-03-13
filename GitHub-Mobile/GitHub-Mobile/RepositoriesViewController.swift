@@ -7,40 +7,108 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+
 
 class RepositoriesViewController: UITableViewController {
-
+    
+    var access_token = "0f61ac41c59e710e19166c66c06183c4b4daed51"
+    var repos : [Repositories] = []
+    @IBOutlet weak var table: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //tableView.register(RepositoriesTableViewCell.self, forCellReuseIdentifier: "repo_cell")
+        
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        getRepos()
+    
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        //self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    func getRepos(){
+        
+        self.repos=[]
+        
+        Alamofire.request("https://api.github.com/users/AnonymousWu/repos").responseJSON { response in
+            //print(response)
+            
+            if response.result.isSuccess{
+                print("Success! Got Repositories")
+                let repoJSON: JSON = JSON(response.result.value!)
+                //print(repoJSON)
+                self.updateRepo(json: repoJSON)
+            }
+            else{
+                print("ERROR \(String(describing: response.result.error))")
+            }
+            self.tableView.reloadData()
+            }
+        
+    }
+    
+    func updateRepo(json: JSON){
+        for (_,dict) in json{
+            
+            
+            //let repo_name = dict["name"].rawString()!
+            let repo_name = (dict["name"].rawString()!)
+            //print(repo_name)
+            let author_dict = dict["owner"]
+            let author = author_dict["login"].rawString()!
+            let url = dict["html_url"].rawString()!
+            let summary = dict["description"].rawString()!
+            let language = dict["language"].rawString()!
+            
+            let repo = Repositories(repo_name: repo_name, author: author, url: url, summary: summary, language: language)
+            
+            self.repos.append(repo)
+        }
+    }
+    
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.repos.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let repo_cell = tableView.dequeueReusableCell(withIdentifier: "repo_cell", for: indexPath) as! RepositoriesTableViewCell
+ //       print(repo_cell)
+        
+        //var repo: Repositories
+        let curr = self.repos[indexPath.row]
+        //print(repo)
+        //repo_cell.repoNameLabel?.text = repo.repo_name
+        repo_cell.setRepoCell(repo: curr)
 
-        // Configure the cell...
-
-        return cell
+        return repo_cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let url = self.repos[indexPath.row].url
+        if let url = URL(string: url){
+            UIApplication.shared.open(url)
+        }
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.

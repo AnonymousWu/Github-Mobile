@@ -5,4 +5,5 @@ target 'GitHub-Mobile' do
     pod 'Alamofire'
     pod 'OAuthSwift'
     pod 'Kingfisher'
+    pod 'SwiftyJSON'
 end

@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1LH-ik-gmr">
-                                <rect key="frame" x="20" y="272" width="335" height="25"/>
+                                <rect key="frame" x="18.882852292024268" y="272" width="335" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="username">
@@ -32,7 +32,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VTo-5W-5Cf">
-                                <rect key="frame" x="111.49216927277405" y="80" width="149.99999999999997" height="150"/>
+                                <rect key="frame" x="110.26146010187529" y="80.000000000000227" width="150.00000000000014" height="149.99999999999977"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2l-Vp-t7p">
@@ -72,7 +72,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkd-Qn-e65">
-                                <rect key="frame" x="135.04451849094198" y="324" width="103.99999999999999" height="25.000000000000114"/>
+                                <rect key="frame" x="133.92737078296636" y="324" width="103.99999999999994" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="FollowingCount">
@@ -86,7 +86,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vru-c8-OAi">
-                                <rect key="frame" x="154.04451849094198" y="352" width="65.000000000000028" height="24.999999999999886"/>
+                                <rect key="frame" x="152.92737078296614" y="352" width="65.000000000000085" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Following"/>
                                 <connections>
@@ -178,7 +178,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oE1-j9-5VH">
-                                <rect key="frame" x="20" y="242" width="335" height="25"/>
+                                <rect key="frame" x="18.882852292024268" y="242.00000000000023" width="335" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="name">
@@ -210,6 +210,7 @@
                         <outlet property="FollowingCountLabel" destination="bkd-Qn-e65" id="laL-ob-Cqw"/>
                         <outlet property="ReposCountLabel" destination="A2l-Vp-t7p" id="gtI-Db-Wd8"/>
                         <outlet property="avatarImage" destination="VTo-5W-5Cf" id="h0k-8o-5EX"/>
+                        <outlet property="bioLabel" destination="X9z-OG-nFw" id="ASg-kN-yur"/>
                         <outlet property="emailLabel" destination="UhO-Zp-MZZ" id="mdE-ET-wiD"/>
                         <outlet property="nameLabel" destination="oE1-j9-5VH" id="1Re-1H-c5M"/>
                         <outlet property="profileCreateDateLabel" destination="vkT-Cl-aOZ" id="M6c-dt-lqv"/>
@@ -225,34 +226,101 @@
         <scene sceneID="Q2q-aS-PHP">
             <objects>
                 <tableViewController id="Tdb-XP-hZr" customClass="RepositoriesViewController" customModule="GitHub_Mobile" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ELv-B8-ZBS">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ELv-B8-ZBS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="RepoCell" textLabel="62C-Qk-OAg" detailTextLabel="LKg-k1-3ei" style="IBUITableViewCellStyleSubtitle" id="lPl-eU-ydC">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="repo_cell" id="xgQ-ht-5Oc" customClass="RepositoriesTableViewCell" customModule="GitHub_Mobile" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lPl-eU-ydC" id="p96-RG-WZK">
-                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.666666666666664"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xgQ-ht-5Oc" id="bdd-p9-3u7">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="119.66666666666667"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="62C-Qk-OAg">
-                                            <rect key="frame" x="16.000000000000004" y="5" width="33.333333333333336" height="20.333333333333332"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqX-gX-O0a">
+                                            <rect key="frame" x="16" y="21" width="343" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="b45-uJ-3tQ"/>
+                                            </constraints>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Repository Name">
+                                                    <attributes>
+                                                        <color key="NSColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" size="16" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LKg-k1-3ei">
-                                            <rect key="frame" x="15.999999999999996" y="25.333333333333332" width="32.666666666666664" height="14.333333333333334"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="textColor"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y4P-yU-WCy">
+                                            <rect key="frame" x="16" y="50" width="343" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="rIh-2t-i1Q"/>
+                                            </constraints>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Summary">
+                                                    <attributes>
+                                                        <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6UQ-9c-TEw">
+                                            <rect key="frame" x="16" y="93" width="147" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="16" id="5z1-it-pmX"/>
+                                                <constraint firstAttribute="width" constant="147" id="P6w-eY-f8n"/>
+                                            </constraints>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Language">
+                                                    <attributes>
+                                                        <color key="NSColor" name="systemGrayColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxq-AV-vcX">
+                                            <rect key="frame" x="206" y="93" width="153" height="16"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Author">
+                                                    <attributes>
+                                                        <color key="NSColor" name="systemGrayColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Y4P-yU-WCy" firstAttribute="leading" secondItem="6UQ-9c-TEw" secondAttribute="leading" id="0QC-n6-SpO"/>
+                                        <constraint firstItem="6UQ-9c-TEw" firstAttribute="top" secondItem="Y4P-yU-WCy" secondAttribute="bottom" constant="22" id="2G7-fA-vxA"/>
+                                        <constraint firstItem="Y4P-yU-WCy" firstAttribute="trailing" secondItem="vxq-AV-vcX" secondAttribute="trailing" id="9vS-sJ-kPq"/>
+                                        <constraint firstItem="pqX-gX-O0a" firstAttribute="trailing" secondItem="bdd-p9-3u7" secondAttribute="trailingMargin" id="E1L-uP-HNd"/>
+                                        <constraint firstItem="6UQ-9c-TEw" firstAttribute="baseline" secondItem="vxq-AV-vcX" secondAttribute="baseline" id="JFw-l5-WOZ"/>
+                                        <constraint firstItem="pqX-gX-O0a" firstAttribute="top" secondItem="bdd-p9-3u7" secondAttribute="topMargin" constant="10" id="Swc-s0-CFB"/>
+                                        <constraint firstItem="vxq-AV-vcX" firstAttribute="leading" secondItem="6UQ-9c-TEw" secondAttribute="trailing" constant="43" id="TaU-34-gs3"/>
+                                        <constraint firstItem="pqX-gX-O0a" firstAttribute="leading" secondItem="bdd-p9-3u7" secondAttribute="leadingMargin" id="aUS-dl-aKx"/>
+                                        <constraint firstItem="pqX-gX-O0a" firstAttribute="trailing" secondItem="Y4P-yU-WCy" secondAttribute="trailing" id="aX3-Yt-HQV"/>
+                                        <constraint firstItem="pqX-gX-O0a" firstAttribute="leading" secondItem="Y4P-yU-WCy" secondAttribute="leading" id="bqR-6P-fgW"/>
+                                        <constraint firstItem="Y4P-yU-WCy" firstAttribute="top" secondItem="pqX-gX-O0a" secondAttribute="bottom" constant="8" symbolic="YES" id="muo-uy-R4N"/>
+                                        <constraint firstItem="6UQ-9c-TEw" firstAttribute="firstBaseline" secondItem="vxq-AV-vcX" secondAttribute="firstBaseline" id="ob1-mv-sqt"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <connections>
+                                    <outlet property="authorLabel" destination="vxq-AV-vcX" id="xFa-Ms-Zzj"/>
+                                    <outlet property="languageLabel" destination="6UQ-9c-TEw" id="nMA-7n-wjW"/>
+                                    <outlet property="repoNameLabel" destination="pqX-gX-O0a" id="ekl-fL-bzl"/>
+                                    <outlet property="summaryLabel" destination="Y4P-yU-WCy" id="z1Z-Of-UxM"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -261,10 +329,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="22y-Ax-DZI"/>
+                    <connections>
+                        <outlet property="table" destination="ELv-B8-ZBS" id="cWG-lf-Mpa"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RLl-2D-1Aq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1465" y="-449"/>
+            <point key="canvasLocation" x="1464.8" y="-449.26108374384239"/>
         </scene>
         <!--Following-->
         <scene sceneID="7nF-IU-ihB">
@@ -331,7 +402,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Tdb-XP-hZr" kind="relationship" relationship="rootViewController" id="W8w-1K-8aQ"/>
+                        <segue destination="Tdb-XP-hZr" kind="relationship" relationship="rootViewController" id="YO1-3Z-tXq"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jUL-fJ-TRC" userLabel="First Responder" sceneMemberID="firstResponder"/>
