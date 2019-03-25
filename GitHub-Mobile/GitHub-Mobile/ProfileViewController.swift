@@ -11,6 +11,8 @@ import Alamofire
 import OAuthSwift
 import Kingfisher
 
+var username = "AnonymousWu"
+
 class ProfileViewController: UIViewController {
     
     // MARK - Properties
@@ -34,7 +36,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var websiteLabel: UILabel!
     @IBOutlet weak var profileCreateDateLabel: UILabel!
     
-    var access_token = "0f61ac41c59e710e19166c66c06183c4b4daed51"
+//    var access_token = "0f61ac41c59e710e19166c66c06183c4b4daed51"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,19 +47,20 @@ class ProfileViewController: UIViewController {
     
     func logIn(){
         
-        Alamofire.request("https://api.github.com/user?access_token=" + access_token).responseJSON { response in
+        Alamofire.request("https://api.github.com/users/" + username).responseJSON { response in
+        //Alamofire.request("https://api.github.com/user?access_token=" + access_token).responseJSON { response in
             //print(response)
             if let dict = response.result.value as? [String: Any] {
                 //print(dict)
                 
                 // name
-                self.nameLabel.text = ((dict["name"] == nil ? "" : dict["name"]!) as! String)
+                self.nameLabel.text = ((dict["name"] is NSNull || dict["name"] == nil ? "" : dict["name"]!) as! String)
                 
                 // username
-                self.usernameLabel.text = ((dict["login"] == nil ? "" : dict["login"]!) as! String)
+                self.usernameLabel.text = ((dict["login"] is NSNull || dict["login"] == nil ? "" : dict["login"]!) as! String)
                 
                 // avatar
-                let avatar_url = (dict["avatar_url"] == nil ? "" : dict["avatar_url"]!) as! String
+                let avatar_url = (dict["avatar_url"] is NSNull || dict["avatar_url"] == nil ? "" : dict["avatar_url"]!) as! String
                 let avatarURL = URL(string: avatar_url)
                 let data = try? Data(contentsOf: avatarURL!)
                 if let imageData = data {
@@ -71,18 +74,19 @@ class ProfileViewController: UIViewController {
                 }
                 
                 // Number of Repositories
-                self.ReposCountLabel.text = ((dict["public_repos"] == nil ? "" : "\(String(describing: dict["public_repos"]!))"))
+                self.ReposCountLabel.text = ((dict["public_repos"] is NSNull || dict["public_repos"] == nil ? "" : "\(String(describing: dict["public_repos"]!))"))
                 
                 // Numbert of Followers
-                self.FollowerCountLabel.text = ((dict["followers"] == nil ? "" : "\(String(describing: dict["followers"]!))"))
+                self.FollowerCountLabel.text = ((dict["followers"] is NSNull || dict["followers"] == nil ? "" : "\(String(describing: dict["followers"]!))"))
                 
                 
-                self.FollowingCountLabel.text = ((dict["following"] == nil ? "" : "\(String(describing: dict["following"]!))"))
+                self.FollowingCountLabel.text = ((dict["following"] is NSNull || dict["following"] == nil ? "" : "\(String(describing: dict["following"]!))"))
 
                 // bio
-                self.bioLabel.text = ((dict["bio"] is NSNull || dict["bio"] == nil ? "" : dict["bio"]!) as! String)
+                self.bioLabel.text = ((dict["bio"] is NSNull || dict["bio"] is NSNull || dict["bio"] == nil ? "" : dict["bio"]!) as! String)
                 
                 // email
+                print(dict)
                 self.emailLabel.text = ((dict["email"] is NSNull || dict["email"] == nil ? "" : dict["email"]!) as! String)
                 
                 // website

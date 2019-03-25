@@ -33,7 +33,7 @@ class FollowingViewController: UITableViewController {
         
         self.following = []
         
-        Alamofire.request("https://api.github.com/users/AnonymousWu/following").responseJSON { response in
+        Alamofire.request("https://api.github.com/users/"+username+"/following").responseJSON { response in
             
             if response.result.isSuccess{
                 print("Success! Got Following")
@@ -95,11 +95,17 @@ class FollowingViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-        let url = self.following[indexPath.row].url
-        if let url = URL(string: url){
-            UIApplication.shared.open(url)
-        }
+//        let url = self.following[indexPath.row].url
+//        if let url = URL(string: url){
+//            UIApplication.shared.open(url)
+//        }
         tableView.deselectRow(at: indexPath, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "0") as! UITabBarController
+        self.present (vc, animated: true, completion: nil)
+        username = self.following[indexPath.row].name
+        vc.selectedIndex = 0
     }
     
     

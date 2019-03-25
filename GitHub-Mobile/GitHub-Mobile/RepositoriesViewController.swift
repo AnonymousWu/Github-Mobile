@@ -13,7 +13,6 @@ import SwiftyJSON
 
 class RepositoriesViewController: UITableViewController {
     
-    var access_token = "0f61ac41c59e710e19166c66c06183c4b4daed51"
     var repos : [Repositories] = []
     @IBOutlet weak var table: UITableView!
     
@@ -37,7 +36,7 @@ class RepositoriesViewController: UITableViewController {
         
         self.repos=[]
         
-        Alamofire.request("https://api.github.com/users/AnonymousWu/repos").responseJSON { response in
+        Alamofire.request("https://api.github.com/users/"+username+"/repos").responseJSON { response in
             //print(response)
             
             if response.result.isSuccess{

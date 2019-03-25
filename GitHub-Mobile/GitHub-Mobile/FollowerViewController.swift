@@ -11,8 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 class FollowerViewController: UITableViewController {
-    
-    var access_token = "0f61ac41c59e710e19166c66c06183c4b4daed51"
+
     var followers : [User] = []
 
     override func viewDidLoad() {
@@ -32,7 +31,7 @@ class FollowerViewController: UITableViewController {
     func getFollowers(){
         self.followers = []
         
-        Alamofire.request("https://api.github.com/users/AnonymousWu/followers").responseJSON { response in
+        Alamofire.request("https://api.github.com/users/"+username+"/followers").responseJSON { response in
             
             if response.result.isSuccess{
                 print("Success! Got Followers")
@@ -93,11 +92,16 @@ class FollowerViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-        let url = self.followers[indexPath.row].url
-        if let url = URL(string: url){
-            UIApplication.shared.open(url)
-        }
+//        let url = self.followers[indexPath.row].url
+//        if let url = URL(string: url){
+//            UIApplication.shared.open(url)
+//        }
         tableView.deselectRow(at: indexPath, animated: true)
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "0") as! UITabBarController
+        self.present (vc, animated: true, completion: nil)
+        username = self.followers[indexPath.row].name
+        vc.selectedIndex = 0
     }
     
     
