@@ -341,12 +341,12 @@
         <scene sceneID="Ees-aF-PJ0">
             <objects>
                 <tableViewController id="8rG-Jx-Z0z" customClass="FollowingViewController" customModule="GitHub_Mobile" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cUl-ge-dHq">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="cUl-ge-dHq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="following_cell" id="lu3-Wf-vPV" customClass="FollowingTableViewCell" customModule="GitHub_Mobile" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="following_cell" rowHeight="60" id="lu3-Wf-vPV" customClass="FollowingTableViewCell" customModule="GitHub_Mobile" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lu3-Wf-vPV" id="Wtl-Fs-aJo">
@@ -418,29 +418,13 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="Mn6-0h-scd" kind="relationship" relationship="viewControllers" id="XgU-at-C5W"/>
-                        <segue destination="WAr-iw-0Pl" kind="relationship" relationship="viewControllers" id="415-ld-ezw"/>
                         <segue destination="vN3-QK-Ecn" kind="relationship" relationship="viewControllers" id="hA9-RL-BsI"/>
+                        <segue destination="U4f-zB-SJ4" kind="relationship" relationship="viewControllers" id="7WQ-RH-q72"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
-        </scene>
-        <!--Follower-->
-        <scene sceneID="cbg-Vx-lJn">
-            <objects>
-                <viewController id="WAr-iw-0Pl" customClass="FollowerViewController" customModule="GitHub_Mobile" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="0e8-Vn-99t">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="P9M-mm-Vhj"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Follower" image="Follower" id="23o-dN-3vy"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GGv-aF-6ux" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1" y="749"/>
         </scene>
         <!--Repositories-->
         <scene sceneID="mvu-ty-AMY">
@@ -461,6 +445,75 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jUL-fJ-TRC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="-449"/>
+        </scene>
+        <!--Follower View Controller-->
+        <scene sceneID="vkz-Um-Xdh">
+            <objects>
+                <tableViewController id="P9a-b3-WHM" customClass="FollowerViewController" customModule="GitHub_Mobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="19u-LN-CWV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="follower_cell" rowHeight="60" id="LEs-aa-bzk" customClass="FollowerTableViewCell" customModule="GitHub_Mobile" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LEs-aa-bzk" id="9VR-XF-E7Z">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UPa-Dw-oue">
+                                            <rect key="frame" x="16" y="9" width="40" height="40"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJU-Kp-BKh">
+                                            <rect key="frame" x="74" y="19" width="227" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Label">
+                                                    <attributes>
+                                                        <color key="NSColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" size="16" name="Helvetica"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="avatarImage" destination="UPa-Dw-oue" id="wJG-ny-ECQ"/>
+                                    <outlet property="nameLabel" destination="kJU-Kp-BKh" id="ObS-Df-ari"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="P9a-b3-WHM" id="iyg-YC-pa8"/>
+                            <outlet property="delegate" destination="P9a-b3-WHM" id="lCi-Yn-lo2"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="q4S-ru-VRD"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PRL-hw-uXQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="729" y="924"/>
+        </scene>
+        <!--Followers-->
+        <scene sceneID="bbh-ym-0e2">
+            <objects>
+                <navigationController id="U4f-zB-SJ4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Followers" image="Follower" id="aZU-ui-9AQ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lT9-EW-RfZ">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="P9a-b3-WHM" kind="relationship" relationship="rootViewController" id="9Ui-4U-c6j"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IqZ-7Q-Pmn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1" y="771"/>
         </scene>
     </scenes>
     <resources>

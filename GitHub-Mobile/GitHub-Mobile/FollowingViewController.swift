@@ -88,7 +88,6 @@ class FollowingViewController: UITableViewController {
         //       print(following_cell)
 
         let curr = self.following[indexPath.row]
-        print(curr.name)
         following_cell.setFollowingCell(following: curr)
 
         return following_cell
