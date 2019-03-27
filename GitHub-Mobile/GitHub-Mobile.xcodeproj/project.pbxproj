@@ -18,6 +18,10 @@
 		946DB8B6223317850069952D /* GitHub_MobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946DB8B5223317850069952D /* GitHub_MobileTests.swift */; };
 		946DB8C122331BBB0069952D /* FollowingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946DB8C022331BBB0069952D /* FollowingViewController.swift */; };
 		946DB8C3223478E70069952D /* FollowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946DB8C2223478E70069952D /* FollowerViewController.swift */; };
+		94E018D322483832003D8D9B /* FollowingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E018D222483832003D8D9B /* FollowingTableViewCell.swift */; };
+		94E018D522483A1F003D8D9B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E018D422483A1F003D8D9B /* User.swift */; };
+		94E018D72248641D003D8D9B /* FollowerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E018D62248641D003D8D9B /* FollowerTableViewCell.swift */; };
+		94E018D9224B2ADB003D8D9B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94E018D8224B2ADB003D8D9B /* GoogleService-Info.plist */; };
 		E03650BF0A6C849E8543ECAA /* Pods_GitHub_Mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E96A159807AE3A3D1C585D2 /* Pods_GitHub_Mobile.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +53,10 @@
 		946DB8B7223317850069952D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		946DB8C022331BBB0069952D /* FollowingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingViewController.swift; sourceTree = "<group>"; };
 		946DB8C2223478E70069952D /* FollowerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerViewController.swift; sourceTree = "<group>"; };
+		94E018D222483832003D8D9B /* FollowingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingTableViewCell.swift; sourceTree = "<group>"; };
+		94E018D422483A1F003D8D9B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		94E018D62248641D003D8D9B /* FollowerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerTableViewCell.swift; sourceTree = "<group>"; };
+		94E018D8224B2ADB003D8D9B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A5A5D071FEBA91FEAF222472 /* Pods-GitHub-Mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub-Mobile.release.xcconfig"; path = "Target Support Files/Pods-GitHub-Mobile/Pods-GitHub-Mobile.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,13 +119,17 @@
 		946DB89D223317830069952D /* GitHub-Mobile */ = {
 			isa = PBXGroup;
 			children = (
+				94E018D8224B2ADB003D8D9B /* GoogleService-Info.plist */,
 				946DB89E223317830069952D /* AppDelegate.swift */,
 				946DB8A0223317830069952D /* ProfileViewController.swift */,
 				94074DBD2236073A009086EE /* RepositoriesViewController.swift */,
 				94074DBF22360848009086EE /* Repositories.swift */,
 				941D3B64223812350026668E /* RepositoriesTableViewCell.swift */,
+				94E018D422483A1F003D8D9B /* User.swift */,
 				946DB8C022331BBB0069952D /* FollowingViewController.swift */,
+				94E018D222483832003D8D9B /* FollowingTableViewCell.swift */,
 				946DB8C2223478E70069952D /* FollowerViewController.swift */,
+				94E018D62248641D003D8D9B /* FollowerTableViewCell.swift */,
 				946DB8A4223317830069952D /* Main.storyboard */,
 				946DB8A7223317850069952D /* Assets.xcassets */,
 				946DB8A9223317850069952D /* LaunchScreen.storyboard */,
@@ -219,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				946DB8AB223317850069952D /* LaunchScreen.storyboard in Resources */,
+				94E018D9224B2ADB003D8D9B /* GoogleService-Info.plist in Resources */,
 				946DB8A8223317850069952D /* Assets.xcassets in Resources */,
 				946DB8A6223317830069952D /* Main.storyboard in Resources */,
 			);
@@ -281,8 +294,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				946DB8C122331BBB0069952D /* FollowingViewController.swift in Sources */,
+				94E018D72248641D003D8D9B /* FollowerTableViewCell.swift in Sources */,
+				94E018D522483A1F003D8D9B /* User.swift in Sources */,
 				94074DBE2236073A009086EE /* RepositoriesViewController.swift in Sources */,
 				946DB89F223317830069952D /* AppDelegate.swift in Sources */,
+				94E018D322483832003D8D9B /* FollowingTableViewCell.swift in Sources */,
 				946DB8C3223478E70069952D /* FollowerViewController.swift in Sources */,
 				941D3B65223812350026668E /* RepositoriesTableViewCell.swift in Sources */,
 				946DB8A1223317830069952D /* ProfileViewController.swift in Sources */,

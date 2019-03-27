@@ -9,11 +9,20 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import Firebase
+import FirebaseDatabase
 
 class FollowingViewController: UITableViewController {
     
-    var access_token = "0f61ac41c59e710e19166c66c06183c4b4daed51"
     var following : [User] = []
+    var following_ref: DatabaseReference!
+    
+    @objc func onButtonClicked(_ sender: UIButton) {
+        let todoEndpoint = "https://api.github.com/user/following/" + following[sender.tag].name
+        Alamofire.request(todoEndpoint, method: .delete, parameters: nil, encoding: JSONEncoding.default, headers: ["Authorization": "token " + token]).responseJSON { response in
+            print("Unfollow Success")
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +31,7 @@ class FollowingViewController: UITableViewController {
         self.tableView.dataSource = self
         getFollowing()
         
+        self.following_ref = Database.database().reference()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -65,6 +75,12 @@ class FollowingViewController: UITableViewController {
             let url = dict["html_url"].rawString()!
             
             let follow = User(image: image, name: name, url: url)
+            
+            let ref = self.following_ref.child("Following")
+            let following_ref = ref.child(name)
+            following_ref.setValue(["name": name,
+                          "url": url])
+            
             self.following.append(follow)
         }
     }
@@ -89,7 +105,12 @@ class FollowingViewController: UITableViewController {
 
         let curr = self.following[indexPath.row]
         following_cell.setFollowingCell(following: curr)
-
+        
+        let button = following_cell.unfollowButton
+        button?.isUserInteractionEnabled = true
+        button?.tag = indexPath.row
+        button?.addTarget(self, action: #selector(onButtonClicked(_:)), for: .touchUpInside)
+        
         return following_cell
     }
     

@@ -13,6 +13,7 @@ class FollowingTableViewCell: UITableViewCell {
     // MARK - Properties
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var avatarImage: UIImageView!
+    @IBOutlet weak var unfollowButton: UIButton!
     
     
     func setFollowingCell(following: User){

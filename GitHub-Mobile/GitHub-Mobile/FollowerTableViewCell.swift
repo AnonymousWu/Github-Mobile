@@ -7,13 +7,16 @@
 //
 
 import UIKit
+import Alamofire
 
 class FollowerTableViewCell: UITableViewCell {
     
     // MARK - Properties
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var avatarImage: UIImageView!
+    @IBOutlet weak var followButton: UIButton!
     
+
     func setFollowerCell(follower: User){
         nameLabel?.text = follower.name
         avatarImage.image = follower.image

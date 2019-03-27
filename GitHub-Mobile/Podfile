@@ -6,4 +6,7 @@ target 'GitHub-Mobile' do
     pod 'OAuthSwift'
     pod 'Kingfisher'
     pod 'SwiftyJSON'
+    pod 'Firebase/Core'
+    pod 'Firebase/Database'
+
 end

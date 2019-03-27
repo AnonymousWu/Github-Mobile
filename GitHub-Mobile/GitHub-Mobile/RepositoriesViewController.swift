@@ -9,12 +9,24 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import Firebase
+import FirebaseDatabase
 
 
 class RepositoriesViewController: UITableViewController {
     
     var repos : [Repositories] = []
     @IBOutlet weak var table: UITableView!
+    
+    var repo_ref : DatabaseReference!
+    
+    @objc func onButtonClicked(_ sender: UIButton) {
+        let todoEndpoint = "https://api.github.com/user/starred/AnonymousWu/" + repos[sender.tag].repo_name
+        Alamofire.request(todoEndpoint, method: .put, parameters: nil, encoding: JSONEncoding.default, headers: ["Authorization": "token " + token]).responseJSON { response in
+            print("Star Success")
+           
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +36,7 @@ class RepositoriesViewController: UITableViewController {
         self.tableView.dataSource = self
         getRepos()
     
-
+        self.repo_ref = Database.database().reference()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -68,6 +80,14 @@ class RepositoriesViewController: UITableViewController {
             
             let repo = Repositories(repo_name: repo_name, author: author, url: url, summary: summary, language: language)
             
+            let ref = self.repo_ref.child("Repositories")
+            let repo_ref = ref.child(repo_name)
+            repo_ref.setValue(["Repository Name": repo_name,
+                         "author": author,
+                         "url": url,
+                         "summary": summary,
+                         "languange": language])
+            
             self.repos.append(repo)
         }
     }
@@ -95,6 +115,11 @@ class RepositoriesViewController: UITableViewController {
         //print(repo)
         //repo_cell.repoNameLabel?.text = repo.repo_name
         repo_cell.setRepoCell(repo: curr)
+        
+        let button = repo_cell.starButton
+        button?.isUserInteractionEnabled = true
+        button?.tag = indexPath.row
+        button?.addTarget(self, action: #selector(onButtonClicked(_:)), for: .touchUpInside)
 
         return repo_cell
     }

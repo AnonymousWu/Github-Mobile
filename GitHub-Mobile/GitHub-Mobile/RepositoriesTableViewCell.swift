@@ -16,6 +16,8 @@ class RepositoriesTableViewCell: UITableViewCell {
     @IBOutlet weak var summaryLabel: UILabel!
     @IBOutlet weak var languageLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var starButton: UIButton!
+    
     
     func setRepoCell(repo : Repositories){
         
