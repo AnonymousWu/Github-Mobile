@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitHub-Mobile/ProfileViewController.swift"
+            timestampString = "575356386.178231"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "ProfileViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GitHub_Mobile.ProfileViewController.profileCreateDateLabel.getter : weak Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "GitHub-Mobile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/XiaoxiaoWu/Documents/UIUC/CS%20242/assignment3/sp-19-cs242-assignment3/GitHub-Mobile/GitHub-Mobile/ProfileViewController.swift"
+                  timestampString = "575157897.124788"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GitHub_Mobile.ProfileViewController.profileCreateDateLabel.setter : weak Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "GitHub-Mobile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/XiaoxiaoWu/Documents/UIUC/CS%20242/assignment3/sp-19-cs242-assignment3/GitHub-Mobile/GitHub-Mobile/ProfileViewController.swift"
+                  timestampString = "575157897.126527"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "106">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GitHub_Mobile.ProfileViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; GitHub_Mobile.ProfileViewController"
+                  moduleName = "GitHub-Mobile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/XiaoxiaoWu/Documents/UIUC/CS%20242/assignment3/sp-19-cs242-assignment3/GitHub-Mobile/GitHub-Mobile/ProfileViewController.swift"
+                  timestampString = "575157897.128664"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "951">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GitHub_Mobile.ProfileViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;GitHub_Mobile.ProfileViewController&gt;"
+                  moduleName = "GitHub-Mobile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/XiaoxiaoWu/Documents/UIUC/CS%20242/assignment3/sp-19-cs242-assignment3/GitHub-Mobile/GitHub-Mobile/ProfileViewController.swift"
+                  timestampString = "575157897.130618"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "922">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
